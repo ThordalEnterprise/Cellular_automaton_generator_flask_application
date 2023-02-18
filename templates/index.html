@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="apple-touch-icon" href="static/images/tablogo.png">
+    <link rel="shortcut icon" href="static/images/tablogo.png">
+    <link rel="image_src" href="static/images/tablogo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cellular-automaton-Generator</title>
+    <style>
+      #logo {
+  display: block;
+  margin: 0 auto;
+}
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+     /* CSS for styling the table */
+     #countdown {
+font-size: 18px;
+font-weight: bold;
+color: #2196F3;
+text-align: center;
+padding: 10px 20px;
+border-radius: 10px;
+box-shadow: 2px 2px 5px #999;
+background-color: #f2f2f2;
+transition: all 0.5s ease-in-out;
+width: 200px;
+}
+
+#countdown:hover {
+transform: scale(1.05);
+cursor: pointer;
+background-color: #ddd;
+box-shadow: 4px 4px 10px #333;
+}
+     table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      /* CSS for styling the blog post */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      /* Navigation bar */
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+        position: fixed; /* Add this line */
+        top: 0; /* Add this line to specify the position from the top of the screen */
+        width: 100%; /* Add this line to make the navbar take up the full width of the screen */
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 10px 50px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      /* Main content */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#Home">Home</a>
+      <a href="#Art">Art</a>
+      <a href="#Math">Math</a>
+      <a href="#Generator">Generator</a>
+      <a href="#Colormap">Colormap</a>
+
+    </div>
+    <br>
+    <br>
+    <div id="Home" class="container">
+      <h1>Cellular Automaton</h1>
+      <i> - Endless Opportunities </i>
+      <table>
+        <tr>
+          <td  style="border: 0px;"><img style="height: 200px;" src="{{img1}}"></td>
+          <td style="border: 0px;"><img style="height: 200px;" src="{{img2}}"></td>
+          <td style="border: 0px;"><img style="height: 200px;" src="{{img3}}"></td>
+          <td style="border: 0px;"><img style="height: 200px;" src="{{img4}}"></td>
+        </tr>
+        <tr>
+          <td style="border: 0px;"><img style="height: 200px;" src="{{img5}}"></td>
+          <td style="border: 0px;"><img style="height: 200px;" src="{{img6}}"></td>
+          <td style="border: 0px;"><img style="height: 200px;" src="{{img7}}"></td>
+          <td style="border: 0px;"><img style="height: 200px;" src="{{img8}}"></td>
+
+        </tr>
+      </table>
+
+      <p>Cellular automaton is a concept in computer science that involves the creation of virtual cells that can interact with each other based on predefined rules. These cells are often arranged in a grid, and the interactions between them can lead to the emergence of complex patterns and behaviors.
+
+        One of the most well-known examples of cellular automaton is <i>Conway's Game of Life</i>. <br> <br> In this simulation, cells can be in one of two states: <b>alive</b> or <b>dead</b>. The state of a cell is determined by the states of its neighboring cells, with the rule being that a live cell with two or three live neighbors will survive to the next generation, while a dead cell with three live neighbors will come to life. This simple rule leads to the emergence of complex patterns, such as oscillators, gliders, and spaceships.
+
+        Cellular automaton can also be used to model more complex systems. <br> <br> For example, it has been used to model the spread of diseases, the movement of animals, and the growth of cities. In these cases, the cells represent different entities, and the rules for their interactions are based on real-world data.
+
+        In addition to its applications in computer science, cellular automaton has also been used in many other fields, such as physics, biology, and chemistry. For example, it has been used to study the behavior of complex systems in physics, such as the Ising model and the Potts model, and in biology, such as the <i>Belousov-Zhabotinsky </i> reaction and the study of microbial populations.
+
+        <br> <br>Cellular automaton also has a variety of application in Artificial intelligence and machine learning, such as reinforcement learning and neural networks, in which the cells represent different neurons and the rules for their interactions are based on neural networks.
+
+        Despite its many applications, cellular automaton is still an active area of research, with many open questions and challenges. <br> <br>For example, the question of how to design the rules for cell interactions is still not fully understood, and the question of how to predict the behavior of a cellular automaton system is still an open problem.
+
+        Overall, cellular automaton is a fascinating and powerful concept that has led to many important insights in computer science and other fields. Its ability to model complex systems and generate emergent behaviors makes it a valuable tool for researchers and practitioners in many different areas.</p>
+    </div>
+
+    </div>
+    <div id="Art" class="container">
+      <h1>Art</h1>
+      <i> - Generate your own Cellular automaton</i>
+
+      <p>One of the most interesting aspects of CA as an art form is its ability to generate unexpected and complex patterns from simple rules. This has led to its use as a tool for exploring the principles of self-organization and complexity, as well as its use in fields such as computer science, physics, and biology.
+
+        <br><br>CA can be implemented in a variety of ways, including using traditional programming languages such as C++ or Python, as well as using specialized CA software such as Golly or CA Lab. Additionally, CA can be used in combination with other forms of art, such as music and video, to create interactive and immersive experiences.
+
+        <br><br>Overall, Cellular automaton is a fascinating and dynamic form of computer art that continues to inspire and captivate artists and researchers alike. Its ability to generate complex patterns from simple rules makes it a valuable tool for exploring the principles of self-organization and complexity, and its potential for use in a wide range of fields continues to be explored.</p>
+        <table>
+          <tr>
+            <td style="border: 0px;"><img style="height: 200px;" src="{{img9}}"></td>
+            <td style="border: 0px;"><img style="height: 200px;" src="{{img10}}"></td>
+            <td style="border: 0px;"><img style="height: 200px;" src="{{img11}}"></td>
+            <td style="border: 0px;"><img style="height: 200px;" src="{{img12}}"></td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div id="Math" class="container">
+        <h1>Math</h1>
+        <i> - Mathematics for the soul </i>
+        <p>Cellular automata are mathematical models that simulate the behavior of a collection of cells, where each cell can be in one of a finite number of states. These cells are arranged in a grid and update their states based on the states of their neighboring cells according to a set of rules.
+
+          The most famous example of a cellular automaton is John Horton Conway's Game of Life, which is a two-dimensional grid of cells where each cell can be in one of two states: alive or dead. <br><br>The state of each cell in the next generation is determined by the states of the cells in its neighborhood in the current generation according to the following rules:
+
+          <i><br> <br> - A live cell with fewer than two live neighbors dies (underpopulation)</i>
+          <i><br> - A live cell with two or three live neighbors lives on to the next generation</i>
+          <i><br> - A live cell with more than three live neighbors dies (overpopulation)</i>
+          <i><br> - A dead cell with exactly three live neighbors becomes a live cell (reproduction)<br></i>
+          <br>  Cellular automata can be represented by a transition function that maps the states of a cell and its neighbors to the state of the cell in the next generation. This function can be represented as a lookup table or as a set of rules specified in a simple notation such as a Boolean function or a set of state transition rules.
+
+          The behavior of cellular automata can be studied using mathematical techniques such as graph theory, Boolean algebra, and automata theory.<br> <br> The study of the behavior of cellular automata can reveal patterns and emergent phenomena such as self-organization, symmetry breaking, and computation.
+
+          In addition to being a mathematical model, cellular automata can also be used in computer science, physics, chemistry, and many other fields as a tool to simulate complex systems and phenomena. <br><br> The mathematical equation behind cellular automata (CA) is a function that takes in the current state of a cell and the states of its neighboring cells, and returns the next state of the cell. The equation is usually represented as a rule set, which is a set of rules that determine the next state of a cell based on the current state of the cell and the states of its neighbors.
+
+          <br><br>The rule set is often represented as a lookup table, where each row represents the current state of the cell and its neighbors, and the corresponding entry in that row represents the next state of the cell. For example, in a one-dimensional CA with two states (0 and 1), the rule set could be represented as a table with 2^3 = 8 rows, where each row represents a unique combination of the current state of the cell and its two neighbors.
+
+          <br><br>The equation can also be represented in a more compact form using a rule number or a rule code, which is a binary number that represents the rule set. For example, in a one-dimensional CA with two states, the rule number 30 would represent the rule set where a cell is "on" in the next generation if and only if it is "off" in the current generation and one of its neighbors is "on."
+
+          <br><br>In summary, the math behind CA is essentially a function that takes in the current state of a cell and the states of its neighbors, and returns the next state of the cell. It is represented as a rule set, which can be represented in different forms such as lookup table, rule number or rule code.</p>
+          <table>
+            <tr>
+              <td style="border: 0px;"><img style="height: 200px;" src="{{img13}}"></td>
+              <td style="border: 0px;"><img style="height: 200px;" src="{{img14}}"></td>
+              <td style="border: 0px;"><img style="height: 200px;" src="{{img15}}"></td>
+              <td style="border: 0px;"><img style="height: 200px;" src="{{img16}}"></td>
+            </tr>
+          </table>
+
+        </div>
+
+
+
+        <div id="Generator" class="container">
+          <h1>Generator</h1>
+          <i> - Genernate Your First Cellular automaton  </i>
+            <i><br> <br>  - In cellular automata, a rule is a set of instructions that determine how the state of a cell in the grid will change based on the state of its neighboring cells. The "rule value" is a number that represents the specific set of instructions for a particular cellular automaton. </i>
+            <br><i><br> - The Initcond phrase, also known as the initial condition phrase, refers to the initial state of the cells in a cellular automaton. This phrase typically defines the starting configuration of the cells, which can be set randomly or according to a specific pattern. The initial condition is used as the starting point for the automaton's evolution, and can have a significant impact on the final outcome of the simulation.</i>
+            <br><i><br> - In cellular automata, the impulse position refers to the specific location or cell in the initial configuration of the automaton where a change or "impulse" is applied. This impulse is typically used to initiate the evolution of the automaton and can take the form of a change in the state of a single cell or a group of cells. The impulse position can also be thought of as the seed for the automaton's evolution. In some cases, the impulse position may be a randomly chosen cell or a user-specified location.</i>
+            <br><i><br> - The color Map in cellular automata refers to the way in which the different states of the cells are represented visually. Typically, each state is assigned a unique color, and the cells are colored according to their current state. The color Map can be chosen based on the specific application or desired visual representation. It can be set to any color Map. The color Map is used to visualize the pattern of states of the cells in the grid over time.</i>
+            <div style="text-align: center;">
+              <img id="image-to-replace" style="height: 500px; width: 500px; margin: 0 auto;" src="{{ img_output }}" alt="Exercise and healthy food">
+            </div>
+            <div id="countdown"></div>
+            <br>
+            <button id="but" onclick="comp_rand()">Quick Randomizer</button>
+            <br>
+            <table>
+            <tr >
+              <th style="text-align: center;">Rule (1 .. 256)</th>
+              <th style="text-align: center;">Initcond Phrase</th>
+              <th style="text-align: center;">Impulse Position</th>
+              <th style="text-align: center;">Color Map</th>
+            </tr>
+            <tr >
+              <td style="text-align: center; ">
+                <input name="rule_text" max="256" pattern="[0-9]+" min="1" type="number">
+                <input type="checkbox" id="random_rule">
+                <label for="random_rule">Random</label>
+              </td>
+              <td  style="text-align: center;">
+                <input type="radio" name="init_cond" value="random" id="random">
+                <label for="random">Random</label>
+                <input type="radio" name="init_cond" value="impulse" id="impulse">
+                <label for="impulse">Impulse</label>
+              </td>
+              <td  style="text-align: center;">
+                <input type="radio" name="impulse_pos" value="left" id="left">
+                <label for="left">Left</label>
+                <input type="radio" name="impulse_pos" value="center" id="center">
+                <label for="center">Center</label>
+                <input type="radio" name="impulse_pos" value="right" id="right">
+                <label for="right">Right</label>
+            </td>
+            <td  style="text-align: center;">
+              <select id="colormap">
+                <option name="select" value="Accent">Accent</option>
+                <option name="select"  value="Accent_r">Accent_r</option>
+                <option name="select"  value="Blues">Blues</option>
+                <option name="select"  value="Blues_r">Blues_r</option>
+                <option name="select"  value="BrBG">BrBG</option>
+                <option name="select"  value="BrBG_r">BrBG_r</option>
+                <option name="select"  value="BuGn">BuGn</option>
+                <option name="select"  value="BuGn_r">BuGn_r</option>
+                <option name="select"  value="BuPu">BuPu</option>
+                <option name="select"  value="BuPu_r">BuPu_r</option>
+                <option name="select"  value="CMRmap">CMRmap</option>
+                <option name="select"  value="CMRmap_r">CMRmap_r</option>
+                <option name="select"  value="Dark2">Dark2</option>
+                <option name="select"  value="Dark2_r">Dark2_r</option>
+                <option name="select"  value="GnBu">GnBu</option>
+                <option name="select"  value="GnBu_r">GnBu_r</option>
+                <option name="select"  value="Greens">Greens</option>
+                <option name="select"  value="Greens_r">Greens_r</option>
+                <option name="select"  value="Greys">Greys</option>
+                <option name="select"  value="Greys_r">Greys_r</option>
+                <option name="select"  value="OrRd">OrRd</option>
+                <option name="select"  value="OrRd_r">OrRd_r</option>
+                <option name="select"  value="Oranges">Oranges</option>
+                <option name="select"  value="Oranges_r">Oranges_r</option>
+                <option name="select"  value="PRGn">PRGn</option>
+                <option name="select"  value="PRGn_r">PRGn_r</option>
+                <option name="select"  value="Paired">Paired</option>
+                <option name="select"  value="Paired_r">Paired_r</option>
+                <option name="select"  value="Pastel1">Pastel1</option>
+                <option name="select"  value="Pastel1_r">Pastel1_r</option>
+                <option name="select"  value="Pastel2">Pastel2</option>
+                <option name="select"  value="Pastel2_r">Pastel2_r</option>
+                <option name="select"  value="PiYG">PiYG</option>
+                <option name="select"  value="PiYG_r">PiYG_r</option>
+                <option name="select"  value="PuBu">PuBu</option>
+                <option name="select"  value="PuBuGn">PuBuGn</option>
+                <option name="select"  value="PuBuGn_r">PuBuGn_r</option>
+                <option name="select"  value="PuBu_r">PuBu_r</option>
+                <option name="select"  value="PuOr">PuOr</option>
+                <option name="select"  value="PuOr_r">PuOr_r</option>
+                <option name="select"  value="PuRd">PuRd</option>
+                <option name="select"  value="PuRd_r">PuRd_r</option>
+                <option name="select"  value="Purples">Purples</option>
+                <option name="select"  value="Purples_r">Purples_r</option>
+                <option name="select"  value="RdBu">RdBu</option>
+                <option name="select"  value="RdBu_r">RdBu_r</option>
+                <option name="select"  value="RdGy">RdGy</option>
+                <option name="select"  value="RdGy_r">RdGy_r</option>
+                <option name="select"  value="RdPu">RdPu</option>
+                <option name="select"  value="RdPu_r">RdPu_r</option>
+                <option name="select"  value="RdYlBu">RdYlBu</option>
+                <option name="select"  value="RdYlBu_r">RdYlBu_r</option>
+                <option name="select"  value="RdYlGn">RdYlGn</option>
+                <option name="select"  value="RdYlGn_r">RdYlGn_r</option>
+                <option name="select"  value="Reds">Reds</option>
+                <option name="select"  value="Reds_r">Reds_r</option>
+                <option name="select"  value="Set1">Set1</option>
+                <option name="select"  value="Set1_r">Set1_r</option>
+                <option name="select"  value="Set2">Set2</option>
+                <option name="select"  value="Set2_r">Set2_r</option>
+                <option name="select"  value="Set3">Set3</option>
+                <option name="select"  value="Set3_r">Set3_r</option>
+                <option name="select"  value="Spectral">Spectral</option>
+                <option name="select"  value="Spectral_r">Spectral_r</option>
+                <option name="select"  value="Wistia">Wistia</option>
+                <option name="select"  value="Wistia_r">Wistia_r</option>
+                <option name="select"  value="YlGn">YlGn</option>
+                <option name="select"  value="YlGnBu">YlGnBu</option>
+                <option name="select"  value="YlGnBu_r">YlGnBu_r</option>
+                <option name="select"  value="YlGn_r">YlGn_r</option>
+                <option name="select"  value="YlOrBr">YlOrBr</option>
+                <option name="select"  value="YlOrBr_r">YlOrBr_r</option>
+                <option name="select"  value="YlOrRd">YlOrRd</option>
+                <option name="select"  value="YlOrRd_r">YlOrRd_r</option>
+                <option name="select"  value="afmhot">afmhot</option>
+                <option name="select"  value="afmhot_r">afmhot_r</option>
+                <option name="select"  value="autumn">autumn</option>
+                <option name="select"  value="autumn_r">autumn_r</option>
+                <option name="select"  value="binary">binary</option>
+                <option name="select"  value="binary_r">binary_r</option>
+                <option name="select"  value="bone">bone</option>
+                <option name="select"  value="bone_r">bone_r</option>
+                <option name="select"  value="brg">brg</option>
+                <option name="select"  value="brg_r">brg_r</option>
+                <option name="select"  value="bwr">bwr</option>
+                <option name="select"  value="bwr_r">bwr_r</option>
+                <option name="select"  value="cividis">cividis</option>
+                <option name="select"  value="cividis_r">cividis_r</option>
+                <option name="select"  value="cool">cool</option>
+                <option name="select"  value="cool_r">cool_r</option>
+                <option name="select"  value="coolwarm">coolwarm</option>
+                <option name="select"  value="coolwarm_r">coolwarm_r</option>
+                <option name="select"  value="copper">copper</option>
+                <option name="select"  value="copper_r">copper_r</option>
+                <option name="select"  value="cubehelix">cubehelix</option>
+                <option name="select"  value="cubehelix_r">cubehelix_r</option>
+                <option name="select"  value="flag">flag</option>
+                <option name="select"  value="flag_r">flag_r</option>
+                <option name="select"  value="gist_earth">gist_earth</option>
+                <option name="select"  value="gist_earth_r">gist_earth_r</option>
+                <option name="select"  value="gist_gray">gist_gray</option>
+                <option name="select"  value="gist_gray_r">gist_gray_r</option>
+                <option name="select"  value="gist_heat">gist_heat</option>
+                <option name="select"  value="gist_heat_r">gist_heat_r</option>
+                <option name="select"  value="gist_ncar">gist_ncar</option>
+                <option name="select"  value="gist_ncar_r">gist_ncar_r</option>
+                <option name="select"  value="gist_rainbow">gist_rainbow</option>
+                <option name="select"  value="gist_rainbow_r">gist_rainbow_r</option>
+                <option name="select"  value="gist_stern">gist_stern</option>
+                <option name="select"  value="gist_stern_r">gist_stern_r</option>
+                <option name="select"  value="gist_yarg">gist_yarg</option>
+                <option name="select"  value="gist_yarg_r">gist_yarg_r</option>
+                <option name="select"  value="gnuplot">gnuplot</option>
+                <option name="select"  value="gnuplot2">gnuplot2</option>
+                <option name="select"  value="gnuplot2_r">gnuplot2_r</option>
+                <option name="select"  value="gnuplot_r">gnuplot_r</option>
+                <option name="select"  value="gray">gray</option>
+                <option name="select"  value="gray_r">gray_r</option>
+                <option name="select"  value="hot">hot</option>
+                <option name="select"  value="hot_r">hot_r</option>
+                <option name="select"  value="hsv">hsv</option>
+                <option name="select"  value="hsv_r">hsv_r</option>
+                <option name="select"  value="inferno">inferno</option>
+                <option name="select"  value="inferno_r">inferno_r</option>
+                <option name="select"  value="jet">jet</option>
+                <option name="select"  value="jet_r">jet_r</option>
+                <option name="select"  value="magma">magma</option>
+                <option name="select"  value="magma_r">magma_r</option>
+                <option name="select"  value="nipy_spectral">nipy_spectral</option>
+                <option name="select"  value="nipy_spectral_r">nipy_spectral_r</option>
+                <option name="select"  value="ocean">ocean</option>
+                <option name="select"  value="ocean_r">ocean_r</option>
+                <option name="select"  value="pink">pink</option>
+                <option name="select"  value="pink_r">pink_r</option>
+                <option name="select"  value="plasma">plasma</option>
+                <option name="select"  value="plasma_r">plasma_r</option>
+                <option name="select"  value="prism">prism</option>
+                <option name="select"  value="prism_r">prism_r</option>
+                <option name="select"  value="rainbow">rainbow</option>
+                <option name="select"  value="rainbow_r">rainbow_r</option>
+                <option name="select"  value="seismic">seismic</option>
+                <option name="select"  value="seismic_r">seismic_r</option>
+                <option name="select"  value="spring">spring</option>
+                <option name="select"  value="spring_r">spring_r</option>
+                <option name="select"  value="summer">summer</option>
+                <option name="select"  value="summer_r">summer_r</option>
+                <option name="select"  value="tab10">tab10</option>
+                <option name="select"  value="tab10_r">tab10_r</option>
+                <option name="select"  value="tab20">tab20</option>
+                <option name="select"  value="tab20_r">tab20_r</option>
+                <option name="select"  value="tab20b">tab20b</option>
+                <option name="select"  value="tab20b_r">tab20b_r</option>
+                <option name="select"  value="tab20c">tab20c</option>
+                <option name="select"  value="tab20c_r">tab20c_r</option>
+                <option name="select"  value="terrain">terrain</option>
+                <option name="select"  value="terrain_r">terrain_r</option>
+                <option name="select"  value="turbo">turbo</option>
+                <option name="select"  value="turbo_r">turbo_r</option>
+                <option name="select"  value="twilight">twilight</option>
+                <option name="select"  value="twilight_r">twilight_r</option>
+                <option name="select"  value="twilight_shifted">twilight_shifted</option>
+                <option name="select"  value="twilight_shifted_r">twilight_shifted_r</option>
+                <option name="select"  value="viridis">viridis</option>
+                <option name="select"  value="viridis_r">viridis_r</option>
+                <option name="select"  value="winter">winter</option>
+                <option name="select"  value="winter_r">winter_r</option>
+              </select>
+              <input type="checkbox" id="random_color">
+              <label for="random_color">Random</label>
+          </td>
+            </tr>
+            <tr>
+
+              <td style="text-align: center;">
+                <button id="button" onclick="submitForm()">Generate </button>
+                <button id="buttons" onclick="downloadIMG()">Download</button>
+
+
+
+
+              </tr>
+          </table>
+          </div>
+          <div id="Colormap" class="container">
+            <h1>Colormap</h1>
+            <i> - Color from Matplotlib</i>
+
+            <p>Matplotlib is a plotting library in Python that provides many tools for creating static, animated, and interactive visualizations. One of the features of Matplotlib is the ability to change the appearance of a plot by specifying the color map.
+
+              <br><br>A colormap in Matplotlib is a mapping from a scalar value to an RGBA (red, green, blue, alpha) color. Matplotlib provides many predefined colormaps that can be used for a variety of purposes, such as indicating a scalar value in a 2D image or highlighting a certain region in a plot.</p>
+              <table>
+                <tr>
+                  <td style="border: 0px;"><img style="height: 400px;" src="{{img17}}"></td>
+                </tr>
+                <tr>
+                  <td style="border: 0px;"><img style="height: 400px;" src="{{img18}}"></td>
+                </tr>
+                <tr>
+                  <td style="border: 0px;"><img style="height: 400px;" src="{{img19}}"></td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="footer-dark">
+              <footer>
+                <img id="logo" src="static/images/logo.png">
+
+                          <div style="left: 140px;" class="col-md-10 item text">
+                              <p>Thordal Enterprise is a premier IT-development company specializing in website construction and mobile app development. The company leverages its expertise in the latest technology and design to deliver top-notch solutions to clients. With a focus on delivering exceptional user experiences, Thordal Enterprise is committed to helping businesses stay ahead of the curve in the ever-evolving digital landscape.</p>
+                          <br>
+                          <div class="col item social">
+                            <!-- <a href="#"><i class="icon ion-social-facebook"></i></a>-->
+                            <!-- <a href="#"><i class="icon ion-social-twitter"></i></a>-->
+                            <!-- <a href="#"><i class="icon ion-social-snapchat"></i></a>-->
+                            <!-- <a href="#"><i class="icon ion-social-instagram"></i></a>-->
+                            <a href="https://www.linkedin.com/in/jacob-thordal-jensen-934486171/"><i class="icon ion-social-linkedin"></i></a>
+                            <a href="javascript:void(0);"><i class="icon ion-link"></i></a>
+
+
+                            <!-- <a href="#"><i class="icon ion-social-opensea"></i></a>-->
+
+                          </div>
+                          <p class="copyright">Thordal Enterprise © 2023</p>
+              </footer>
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+      </body>
+
+
+      </html>
+      <script>
+function comp_rand() {
+  const rule_text = document.querySelector('input[name="rule_text"]');
+  const init_cond = document.querySelectorAll('input[name="init_cond"]');
+  const impulse_pos = document.querySelectorAll('input[name="impulse_pos"]');
+  const colormap = document.querySelector('select[id="colormap"]');
+
+  rule_text.value = Math.floor(Math.random() * 256) + 1;
+
+  for (let i = 0; i < init_cond.length; i++) {
+    init_cond[i].checked = false;
+  }
+  const randomIndex1 = Math.floor(Math.random() * init_cond.length);
+  init_cond[randomIndex1].checked = true;
+
+  for (let i = 0; i < impulse_pos.length; i++) {
+    impulse_pos[i].checked = false;
+  }
+  const randomIndex2 = Math.floor(Math.random() * impulse_pos.length);
+  impulse_pos[randomIndex2].checked = true;
+
+  const options = colormap.options;
+  const randomIndex3 = Math.floor(Math.random() * options.length);
+  colormap.selectedIndex = randomIndex3;
+}
+
+
+const checkbox = document.querySelector('#random_color');
+const select = document.querySelector('#colormap');
+
+checkbox.addEventListener('change', () => {
+  if (checkbox.checked) {
+    const options = Array.from(select.options);
+    const randomIndex = Math.floor(Math.random() * options.length);
+    select.value = options[randomIndex].value;
+  }
+});
+
+document.getElementById("random_rule").addEventListener("change", function () {
+  const checkbox = document.getElementById("random_rule");
+  const input = document.querySelector('input[name="rule_text"]');
+
+  if (!checkbox.checked) {
+    input.value = "";
+  }
+  if (this.checked) {
+    var randNum = Math.floor(Math.random() * 256) + 1;
+    document.querySelector('input[name="rule_text"]').value = randNum;
+  }
+});
+
+function downloadIMG() {
+  var img = document.getElementById("image-to-replace");
+  var url = img.src;
+  var link = document.createElement("a");
+  link.download = "image.gif";
+  link.href = url;
+  link.click();
+}
+
+
+function file_exists(path) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("HEAD", path, false);
+      xhr.send();
+      return (xhr.status === 200);
+    }
+
+
+
+function replaceImage() {
+    let image = document.getElementById("image-to-replace");
+
+    var filename = "output.gif";
+    var folder = "static/output";
+
+    var file_path = folder + '/' + filename;
+
+    if (file_exists(file_path)) {
+      image.src = "static/output/output.gif";
+    } else {
+      image.src = "static/output/placeholder-image.png";
+    }
+  }
+
+  function submitForm() {
+    var select = document.getElementById("colormap");
+  var selectedValue = select.options[select.selectedIndex].value;
+  var impulse_pos_selected = false;
+  var init_cond_selected = false;
+  var rule_entered = false;
+
+  var radioInputs1 = document.querySelectorAll('input[name="init_cond"]');
+  for (var i = 0; i < radioInputs1.length; i++) {
+    if (radioInputs1[i].checked) {
+      init_cond_selected = true;
+      break;
+    }
+  }
+
+  var radioInputs2 = document.querySelectorAll('input[name="impulse_pos"]');
+  for (var i = 0; i < radioInputs2.length; i++) {
+    if (radioInputs2[i].checked) {
+      impulse_pos_selected = true;
+      break;
+    }
+  }
+
+  var rule = document.getElementsByName("rule_text")[0].value;
+  if (rule) {
+    rule_entered = true;
+  }
+
+  if (selectedValue && impulse_pos_selected && init_cond_selected && rule_entered) {
+    var countdownDiv = document.getElementById("countdown");
+    var seconds = 30;
+    countdownDiv.innerHTML = "Countdown: " + seconds;
+    var countdownInterval = setInterval(function() {
+      seconds--;
+      countdownDiv.innerHTML = "Countdown: " + seconds;
+      if (seconds === 0) {
+        clearInterval(countdownInterval);
+        countdownDiv.innerHTML = "Countdown complete!";
+        replaceImage();
+      }
+    }, 1000);
+
+    var Initcond_Phrase;
+    for (var i = 0; i < radioInputs1.length; i++) {
+      if (radioInputs1[i].checked) {
+        Initcond_Phrase = radioInputs1[i].value;
+      }
+    }
+    var Impulse_Position;
+    for (var i = 0; i < radioInputs2.length; i++) {
+      if (radioInputs2[i].checked) {
+        Impulse_Position = radioInputs2[i].value;
+      }
+    }
+
+    fetch('http://127.0.0.1:5001/Generator?ID=' + rule + "*" + Initcond_Phrase + "*" + Impulse_Position + "*" + selectedValue)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      });
+  } else {
+    alert("Please enter all the required fields");
+  }
+}
+
+
+     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
