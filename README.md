@@ -13,6 +13,7 @@ The code is a Flask web application that generates and displays a cellular autom
 - The program is able to generate animations for cellular automata defined by a rule number, size, time steps, initial conditions, and the position of the initial impulse. The generated animations are displayed on a webpage using Flask.
 
 [Process]
+
 The program then processes the contents of the input file, which consists of several lines, each containing a single integer. The program reads each integer, computes its factorial using a recursive function, and then writes the result to an output file named output.txt.
 
 The program uses the built-in open() function to open the input and output files in read and write modes, respectively. It then uses a for loop to iterate over each line in the input file, stripping any leading or trailing whitespace and converting the line to an integer using the int() function.
@@ -25,4 +26,5 @@ Once the loop has processed all lines in the input file, the program closes both
 
 [Output]
 
+(static/images/1.gif)
 
