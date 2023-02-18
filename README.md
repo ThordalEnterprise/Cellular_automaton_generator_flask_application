@@ -36,5 +36,14 @@ Once the loop has processed all lines in the input file, the program closes both
 ![Example #1](static/images/1.gif)
 ![Example #1](static/images/2.gif)
 ![Example #1](static/images/3.gif)
+![Example #1](static/images/4.gif)
+![Example #1](static/images/5.gif)
+![Example #1](static/images/6.gif)
+![Example #1](static/images/7.gif)
+![Example #1](static/images/8.gif)
+![Example #1](static/images/9.gif)
+![Example #1](static/images/10.gif)
+![Example #1](static/images/11.gif)
+![Example #1](static/images/12.gif)
 
 
