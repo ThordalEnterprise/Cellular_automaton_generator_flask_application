@@ -26,5 +26,6 @@ Once the loop has processed all lines in the input file, the program closes both
 
 [Output]
 
-(static/images/1.gif)
+[![alt text](static/images/1.gif)
+[![alt text](path/to/image.png)](http://link-to-page.com)
 
