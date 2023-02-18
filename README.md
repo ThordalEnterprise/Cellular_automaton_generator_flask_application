@@ -33,8 +33,8 @@ Once the loop has processed all lines in the input file, the program closes both
 
 - The color Map (164 colors) in cellular automata refers to the way in which the different states of the cells are represented visually. Typically, each state is assigned a unique color, and the cells are colored according to their current state. The color Map can be chosen based on the specific application or desired visual representation. It can be set to any color Map. The color Map is used to visualize the pattern of states of the cells in the grid over time.
 
-[![Example #1](static/images/1.gif)
-[![Example #1](static/images/2.gif)
-[![Example #1](static/images/3.gif)
+![Example #1](static/images/1.gif)
+![Example #1](static/images/2.gif)
+![Example #1](static/images/3.gif)
 
 
